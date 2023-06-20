@@ -1,0 +1,152 @@
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background: url(images/bg-desktop.svg);
+    background-color: hsl(257, 40%, 49%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 52px;
+}
+
+.container {
+    position: relative;
+
+}
+
+.article h1,
+p {
+    color: white
+}
+
+.article {
+    width: 500px;
+    margin-top: 40px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 0.9em;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 3% 9%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: white
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-instagram {
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 9px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+}
+
+.fa-facebook-f:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+    color: hsl(300, 69%, 71%);
+    border: 1px solid hsl(300, 69%, 71%);
+    border-radius: 20px;
+}
+
+.icons {
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 560px;
+    right: 40px
+}
+
+@media only screen and (max-width:375px) {
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    .container{
+        padding:0 40px;
+    }
+ 
+    .grid {
+        
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+   
+    }
+
+    .icons {
+        top: 700px;
+        left: 115px;
+      
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.4em;
+    }
+
+    .article {
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* margin auto ile aricle tam ortaya geldi. bazen containere padding verince belli olmuyor */
+    button{
+        padding: 3% 20%; 
+    }
+
+  
+
+}
